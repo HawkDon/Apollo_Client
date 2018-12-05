@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import gql from "graphql-tag";
+import { withApollo } from 'react-apollo';
 
 const GET_ONE_LOCATIONBLOG = gql`
 query LocationBlog($info: String!){
@@ -36,7 +37,7 @@ const OneLocationBlog = ({ client }) => {
   return (
     <div>
       <h1>Get one locationblog</h1>
-      <h2>Search through info</h2>
+      <h3>Search through info</h3>
       <form>
         <input type="text" value={input} onChange={handleInput} placeholder="Search info"/>
         <input type="submit" value="Run query" onClick={runQuery} />
@@ -61,4 +62,4 @@ const OneLocationBlog = ({ client }) => {
   );
 }
 
-export default OneLocationBlog;
+export default withApollo(OneLocationBlog);

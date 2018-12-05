@@ -16,6 +16,12 @@ class Header extends Component {
                     <li className="dropdown">
                         <a className="dropbtn">Create</a>
                         <div className="dropdown-content">
+                        <Link to="/create/user">
+                            User
+                        </Link>
+                        <Link to="/create/locationblog">
+                            LocationBlog
+                        </Link>
                         </div>
                     </li>
                     <li className="dropdown">

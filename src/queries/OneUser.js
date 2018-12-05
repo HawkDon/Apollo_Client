@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import gql from "graphql-tag";
+import { withApollo } from "react-apollo";
 
 const GET_ONE_USER = gql`
 query User($id: ID!){
@@ -38,7 +39,7 @@ const OneUser = ({ client }) => {
   return (
     <div>
       <h1>Get one user</h1>
-      <h2>Search through id</h2>
+      <h3>Search through id</h3>
       <form>
         <input type="text" value={input} onChange={handleInput} placeholder="Search id"/>
         <input type="submit" value="Run query" onClick={runQuery} />
@@ -63,4 +64,4 @@ const OneUser = ({ client }) => {
   );
 }
 
-export default OneUser;
+export default withApollo(OneUser);
