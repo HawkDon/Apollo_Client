@@ -18,6 +18,7 @@ import OneUser from "./queries/OneUser";
 // Mutations
 import CreateUser from "./mutations/CreateUser";
 import CreateLocationBlog from "./mutations/CreateLocationBlog";
+import DeleteUser from "./mutations/DeleteUser";
 
 // Regular components
 import Welcome from "./Welcome";
@@ -41,7 +42,8 @@ const App = () => (
         <Route path="/read/OnePosition" render={() => <OnePosition />} />
         <Route path="/create/user" render={() => <CreateUser />} />
         <Route path="/create/locationblog" render={() => <CreateLocationBlog />} />
-      </Switch>
+        <Route path="/delete/deleteUser" render={() => <DeleteUser />} />
+        </Switch>
     </ApolloProvider>
   </Router>
 );
