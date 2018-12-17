@@ -50,7 +50,9 @@ class Header extends Component {
                     <li className="dropdown">
                         <a className="dropbtn">Update</a>
                         <div className="dropdown-content">
-
+                            <Link to="/update/updateUser">
+                                User
+                            </Link>
                         </div>
                     </li>
                     <li className="dropdown">
