@@ -26,7 +26,7 @@ import Welcome from "./Welcome";
 import Header from "./Header";
 
 const client = new ApolloClient({
-  uri: "http://localhost:3000/graphql"
+  uri: "https://secure-anchorage-97919.herokuapp.com/graphql"
 });
 
 const App = () => (
